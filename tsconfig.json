@@ -1,0 +1,28 @@
+{
+    "include": [
+        "bin/**/*.ts",
+        "lib/**/*.ts",
+        "lib/**/*.tsx"
+    ],
+    "exclude": [
+        "node_modules",
+        "cdk.out"
+    ],
+    "compilerOptions": {
+        "target": "ES2020", // node 14 기준
+        "module": "commonjs",
+        "lib": [ "ES2020" ],
+        "baseUrl": "./",
+        "rootDirs": ["lib", "bin"],
+        "outDir": "dist",
+        "noUnusedLocals": false,
+        "noUnusedParameters": false,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": false,
+        "inlineSourceMap": true,
+        "inlineSources": true,
+        "experimentalDecorators": true,
+        "strictPropertyInitialization": false,
+        "esModuleInterop": true
+    }
+}

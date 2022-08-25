@@ -1,0 +1,77 @@
+{
+  "availability-zones:account=352298775703:region=ap-northeast-1": [
+    "ap-northeast-1a",
+    "ap-northeast-1c",
+    "ap-northeast-1d"
+  ],
+  "vpc-provider:account=352298775703:filter.tag:Name=steampipe-network-stack/steampipe-vpc:region=ap-northeast-1:returnAsymmetricSubnets=true": {
+    "vpcId": "vpc-0a067717103652b5d",
+    "vpcCidrBlock": "10.80.0.0/16",
+    "availabilityZones": [],
+    "subnetGroups": [
+      {
+        "name": "steampipe-public-subnet-1",
+        "type": "Public",
+        "subnets": [
+          {
+            "subnetId": "subnet-0a682495b6f8dd7a3",
+            "cidr": "10.80.0.0/24",
+            "availabilityZone": "ap-northeast-1a",
+            "routeTableId": "rtb-0acd31dad85209fdb"
+          }
+        ]
+      },
+      {
+        "name": "steampipe-private-subnet-1",
+        "type": "Private",
+        "subnets": [
+          {
+            "subnetId": "subnet-0937435560103883c",
+            "cidr": "10.80.1.0/24",
+            "availabilityZone": "ap-northeast-1a",
+            "routeTableId": "rtb-02646726645ee96c6"
+          }
+        ]
+      }
+    ]
+  },
+  "load-balancer:account=352298775703:loadBalancerTags.0.key=lookupName:loadBalancerTags.0.value=steampipe-nlb:loadBalancerType=network:region=ap-northeast-1": {
+    "loadBalancerArn": "arn:aws:elasticloadbalancing:ap-northeast-1:352298775703:loadbalancer/net/steampipe-nlb/c234907e50fd92ac",
+    "loadBalancerCanonicalHostedZoneId": "Z31USIVHYNEOWT",
+    "loadBalancerDnsName": "steampipe-nlb-c234907e50fd92ac.elb.ap-northeast-1.amazonaws.com",
+    "vpcId": "vpc-0a067717103652b5d",
+    "securityGroupIds": [],
+    "ipAddressType": "ipv4"
+  },
+  "vpc-provider:account=352298775703:filter.vpc-id=vpc-0a067717103652b5d:region=ap-northeast-1:returnAsymmetricSubnets=true": {
+    "vpcId": "vpc-0a067717103652b5d",
+    "vpcCidrBlock": "10.80.0.0/16",
+    "availabilityZones": [],
+    "subnetGroups": [
+      {
+        "name": "steampipe-public-subnet-1",
+        "type": "Public",
+        "subnets": [
+          {
+            "subnetId": "subnet-0a682495b6f8dd7a3",
+            "cidr": "10.80.0.0/24",
+            "availabilityZone": "ap-northeast-1a",
+            "routeTableId": "rtb-0acd31dad85209fdb"
+          }
+        ]
+      },
+      {
+        "name": "steampipe-private-subnet-1",
+        "type": "Private",
+        "subnets": [
+          {
+            "subnetId": "subnet-0937435560103883c",
+            "cidr": "10.80.1.0/24",
+            "availabilityZone": "ap-northeast-1a",
+            "routeTableId": "rtb-02646726645ee96c6"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+    "name": "hackerthon-emergencycrew-steampipe-cdk",
+    "version": "0.1",
+    "bin": {
+        "dataetl-cdk": "bin/dataetl-cdk.js"
+    },
+    "private": true,
+    "license": "UNLICENSED",
+    "author": "joseongil85@gmail.com",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AWS-DNA-4TH-EMERGENCY-CREW/data-steampipe.git"
+    },
+    "bugs": {
+        "url": "https://github.com/AWS-DNA-4TH-EMERGENCY-CREW/data-steampipe/issues"
+    },
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "scripts": {
+        "lint": "eslint lib bin test",
+        "clean": "rm -rf ./dist",
+        "compile": "npx tsc -p tsconfig.json"
+    },
+    "dependencies": {
+        "aws-cdk-lib": "^2.15.0",
+        "constructs": "^10.0.79",
+        "source-map-support": "^0.5.16"
+    },
+    "devDependencies": {
+        "@types/node": "^14.14.7"
+    }
+}
